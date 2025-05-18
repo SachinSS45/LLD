@@ -107,3 +107,16 @@ public class Inheritance {
         myElectricCar.stopEngine();
     }
 }
+/* Output : 
+Suzuki WagonR : Engine started
+Suzuki WagonR : Shifted to gear 1
+Suzuki WagonR : Accelerating to 20 km/h
+Suzuki WagonR : Braking! Speed is now 0 km/h
+Suzuki WagonR : Engine turned off
+----------------------
+Tesla Model S : Battery fully charged!
+Tesla Model S : Engine started
+Tesla Model S : Accelerating to 20 km/h
+Tesla Model S : Braking! Speed is now 0 km/h
+Tesla Model S : Engine turned off
+ */
