@@ -32,3 +32,31 @@ SOLID is an acronym that represents five core principles of object-oriented desi
 
 ###### ✅ 5. Loose Coupling & High Cohesion
 - Encourages designing systems with modular and reusable components.
+# 🧱 Open-Closed Principle (O in SOLID)
+
+> **"Software entities (classes, modules, functions) should be open for extension but closed for modification."**
+
+This principle encourages you to **extend existing code** by **adding new behavior**, rather than modifying the existing source code. It helps make your software more **scalable**, **maintainable**, and **less error-prone**.
+
+---
+
+## 💡 Real-World Analogy
+
+A **plug extension board** allows you to plug in new devices without changing the board itself.
+
+Similarly, in software, we should be able to **add new features** without altering the **existing, working code**.
+
+---
+
+## ❌ Without Open-Closed Principle (Bad Design)
+
+```java
+class NotificationService {
+    public void send(String type, String message) {
+        if (type.equals("EMAIL")) {
+            System.out.println("Sending Email: " + message);
+        } else if (type.equals("SMS")) {
+            System.out.println("Sending SMS: " + message);
+        }
+    }
+}
