@@ -63,3 +63,35 @@ class NotificationService {
 ```
 Every time a new type (e.g., Push Notification) is added, the method must be modified.
 ⚠️ This increases the risk of introducing bugs in already tested code.
+
+### ✅ With Open-Closed Principle (Good Design)
+```java
+interface Notification {
+    void send(String message);
+}
+
+class EmailNotification implements Notification {
+    public void send(String message) {
+        System.out.println("Sending Email: " + message);
+    }
+}
+
+class SMSNotification implements Notification {
+    public void send(String message) {
+        System.out.println("Sending SMS: " + message);
+    }
+}
+
+class NotificationService {
+    public void notifyUser(Notification notification, String message) {
+        notification.send(message);
+    }
+}
+```
+New behavior (e.g., PushNotification) can be added by creating a new class implementing Notification.
+🛡 No need to modify existing code — the system is **open for extension, closed for modification**.
+
+### ✅ Benefits
+- Promotes polymorphism and abstraction
+- Enhances maintainability and flexibility
+- Minimizes risk of breaking existing functionality
