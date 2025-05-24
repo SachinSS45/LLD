@@ -60,3 +60,7 @@ class NotificationService {
         }
     }
 }
+
+Every time a new type (e.g., Push Notification) is added, the method must be modified.
+
+⚠️ This increases the risk of introducing bugs in already tested code.
